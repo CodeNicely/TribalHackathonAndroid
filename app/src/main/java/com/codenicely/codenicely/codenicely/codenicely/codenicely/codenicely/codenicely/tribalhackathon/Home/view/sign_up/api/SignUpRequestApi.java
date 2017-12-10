@@ -20,17 +20,14 @@ public interface SignUpRequestApi {
     @FormUrlEncoded
     @POST(Urls.REQUEST_SIGN_UP)
     Call<OtpData> requestOtp(@Field("mobile") String mobile,
-							 @Field("company_name") String company_name,
-							 @Field("password") String password,
-							 @Field("refer_code") String refer_code);
+                             @Field("name") String company_name,
+                             @Field("password") String password,
+                             @Field("address") String address,@Field("aadhaar_no") String aadhaar,
+    @Field("flag_lang") Boolean lang);
 
     @FormUrlEncoded
     @POST(Urls.REQUEST_OTP_VERIFY)
     Call<SignUpData> requestSignUp(@Field("mobile") String mobile,
-								   @Field("gstin") String gst_in,
-								   @Field("company_name") String company_name,
-								   @Field("email") String email,
-								   @Field("password") String password,
 								   @Field("otp") String otp);
 
     @FormUrlEncoded

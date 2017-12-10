@@ -16,7 +16,7 @@ import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.cod
 
 public class MockSignUpProvider implements SignUpProvider {
     @Override
-    public void requestOtp(String mobile, String company_name, String password, String refer_code, final OtpCallBack otpCallBack) {
+    public void requestOtp(String mobile, String company_name, String password, String otp1, String address, String aadhaar, final OtpCallBack otpCallBack) {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -28,11 +28,11 @@ public class MockSignUpProvider implements SignUpProvider {
 
     private OtpData getMockOtpData() {
 
-        return new OtpData(true,"Otp Sent",false,"");
+        return new OtpData(true,"Otp Sent","");
     }
 
     @Override
-    public void requestSignUp(String mobile, String gst_in, String company_name, String email, String password, String otp, final SignUpCallBack signUpCallBack) {
+    public void requestSignUp(String mobile, String company_name,  String password, String otp,String address,String aadhaar, final SignUpCallBack signUpCallBack) {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

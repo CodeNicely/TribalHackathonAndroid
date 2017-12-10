@@ -6,10 +6,10 @@ package com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.co
 
 public interface SignUpPresenter {
 
-    void requestOtp(String mobile, String company_name, String password, String refer_code, boolean isChecked);
+    void requestOtp(String mobile, String company_name, String password, String otp1, String address, String aadhaar, boolean isChecked);
 
-    void requestSignUp(String mobile, String gst_in, String company_name, String email,
-					   String password, String otp);
+    void requestSignUp(String mobile, String company_name,
+					   String password, String otp,String address,String aadhaar);
 
     void requestOtpResend(String temp_access_token);
 }
