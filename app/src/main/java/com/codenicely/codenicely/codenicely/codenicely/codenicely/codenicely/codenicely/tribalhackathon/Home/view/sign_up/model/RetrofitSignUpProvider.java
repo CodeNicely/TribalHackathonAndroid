@@ -49,10 +49,10 @@ public class RetrofitSignUpProvider implements SignUpProvider {
     }
 
     @Override
-    public void requestOtp(String mobile, String company_name, String password, String refer_code, final OtpCallBack otpCallBack) {
+    public void requestOtp(String mobile, String company_name, String password, String otp1, String address, String aadhaar, final OtpCallBack otpCallBack) {
         Call<OtpData> otpDataCall;
 
-        otpDataCall= signUpRequestApi.requestOtp(mobile, company_name, password,refer_code);
+        otpDataCall= signUpRequestApi.requestOtp(mobile, company_name, password,address,aadhaar,true);
         otpDataCall.enqueue(new Callback<OtpData>() {
             @Override
             public void onResponse(Call<OtpData> call, Response<OtpData> response) {
@@ -68,12 +68,12 @@ public class RetrofitSignUpProvider implements SignUpProvider {
     }
 
     @Override
-    public void requestSignUp(String mobile, String gst_in, String company_name, String email,
-                              String password, String otp, final SignUpCallBack signUpCallBack) {
+    public void requestSignUp(String mobile, String company_name,
+                              String password, String otp,String address,String aadhaar, final SignUpCallBack signUpCallBack) {
 
         Call<SignUpData> signUpDataCall;
 
-        signUpDataCall = signUpRequestApi.requestSignUp(mobile,gst_in,company_name,email,password,
+        signUpDataCall = signUpRequestApi.requestSignUp(mobile,
                 otp);
         signUpDataCall.enqueue(new Callback<SignUpData>() {
             @Override
