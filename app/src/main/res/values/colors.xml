@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#EFC84A</color>
+    <color name="colorPrimaryDark">#C4A33D</color>
+    <color name="colorAccent">#654236</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_color_green">#68ac4d</color>
+    <color name="text_color_dark_green">#278b00</color>
+
+    <color name="lemon_yellow">#FFFF55</color>
+    <color name="button_login">#EFC74A</color>
+    <color name="button_press">#A37A29</color>
+    <color name="text_color">#654236</color>
+    <color name="red">#FF0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="app_grey_lightest">#F6F6F6</color>
+    <color name="app_grey">#E7E7E7</color>
+    <color name="app_grey_dark">#D2D2D2</color>
+    <color name="app_grey_darker">#868686</color>
+    <color name="colorAccentRipple">#AB9791</color>
+    <color name="colorTextView">#8bdaee</color>
+    <color name="colorExpenseCardView">#1d86a1</color>
+    <color name="colorReferralCardView">#eaeaea</color>
+
+    <!--Black color shades-->
+    <color name="black_100_percent">#ff000000</color>
+    <color name="black_90_percent">#e6000000</color>
+    <color name="black_80_percent">#cc000000</color>
+    <color name="black_60_percent">#99000000</color>
+    <color name="black_40_percent">#66000000</color>
+    <color name="black_20_percent">#33000000</color>
+    <color name="black_10_percent">#19000000</color>
+    <color name="black_02_percent">#05000000</color>
+    <color name="black_03_percent">#09000000</color>
+    <color name="black_05_percent">#10000000</color>
+    <color name="black_87_percent">#dd000000</color>
+    <color name="black_percent">#89000000</color>
+    <color name="gray">#424242</color>
+
+
 </resources>
+
