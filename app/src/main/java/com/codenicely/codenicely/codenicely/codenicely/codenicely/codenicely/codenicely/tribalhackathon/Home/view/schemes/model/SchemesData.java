@@ -5,4 +5,22 @@ package com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.co
  */
 
 public class SchemesData {
+    private String name;
+    private int id;
+
+    public SchemesData(int id) {
+        this.id = id;
+    }
+
+    public SchemesData(String name) {
+        this.name = name;
+    }
+
+    public String getTitle() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
 }

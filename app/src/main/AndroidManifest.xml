@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -9,13 +11,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home.view.HomeActivity">
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Home.view.home.Home"
+            android:label="@string/app_name"
+            >
+
+        </activity>
+        <activity
+            android:name=".Home.view.splash.views.Activity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Home.view.login.view.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home.view.sign_up.view.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home.view.forgot_password.view.ForgotActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

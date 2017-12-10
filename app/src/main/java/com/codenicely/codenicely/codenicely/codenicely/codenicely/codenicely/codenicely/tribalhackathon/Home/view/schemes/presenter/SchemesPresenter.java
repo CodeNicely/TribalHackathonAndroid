@@ -5,4 +5,5 @@ package com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.co
  */
 
 public interface SchemesPresenter {
+    void requestSchemes(String access_token,boolean language);
 }
