@@ -26,8 +26,8 @@ public class Home extends AppCompatActivity {
 
         sharedPrefs = new SharedPrefs(this);
         access_token = sharedPrefs.getAccessToken();
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
     }
 
