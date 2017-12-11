@@ -191,5 +191,6 @@
     <string name="create_quotation">Create Quotation</string>
     <string name="contact_person_details">Contact Person Details</string>
     <string name="create_new_quotation">Create New Quotation</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 
 </resources>

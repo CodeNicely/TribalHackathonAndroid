@@ -1,5 +1,7 @@
 package com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.presenter;
 
+import android.util.Log;
+
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.model.SchemesList;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.provider.SchemesProvider;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.view.OnSchemesRecieved;
@@ -26,7 +28,12 @@ public class SchemesPresenterImpl implements SchemesPresenter {
             public void onSuccess(SchemesList schemesList) {
                 schemesView.showProgressBar(false);
                 if (schemesList.isSuccess()){
+                    Log.d("SCheme Presenter","true");
+
                     schemesView.setSchemeData(schemesList.getGet_schemes());
+                }else {
+                    Log.d("SCheme Presenter",schemesList.getMessage());
+
                 }
             }
 

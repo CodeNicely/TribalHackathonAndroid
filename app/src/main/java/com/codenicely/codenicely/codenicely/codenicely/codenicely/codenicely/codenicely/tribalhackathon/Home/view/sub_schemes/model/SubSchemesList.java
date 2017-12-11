@@ -27,6 +27,6 @@ public class SubSchemesList {
 
         this.success = success;
         this.message = message;
-        this.subscheme_list = subscheme_list;
+        this.subscheme_list = get_subschemes;
     }
 }

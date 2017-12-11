@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.helper.SharedPrefs;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.model.SchemesData;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.presenter.SchemesPresenter;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.presenter.SchemesPresenterImpl;
@@ -20,6 +21,7 @@ import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.cod
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,6 +52,7 @@ public class SchemesFragment extends Fragment implements SchemesView {
     LinearLayoutManager linearLayoutManager;
     SchemesAdapter adapter;
     private SchemesPresenter schemesPresenter;
+    SharedPrefs sharedPrefs;
 
 
     public SchemesFragment() {
@@ -88,7 +91,8 @@ public class SchemesFragment extends Fragment implements SchemesView {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view  = inflater.inflate(R.layout.fragment_schemes, container, false);
-
+        ButterKnife.bind(this,view);
+        sharedPrefs = new SharedPrefs(getContext());
         schemes_recycler.setHasFixedSize(true);
         linearLayoutManager = new LinearLayoutManager(getContext());
         schemes_recycler.setLayoutManager(linearLayoutManager);
@@ -97,7 +101,7 @@ public class SchemesFragment extends Fragment implements SchemesView {
         schemes_recycler.setNestedScrollingEnabled(false);
 
         schemesPresenter = new SchemesPresenterImpl(this,new RetrofitSchemesProvider());
-        schemesPresenter.requestSchemes("9999",false);
+        schemesPresenter.requestSchemes(sharedPrefs.getAccessToken(),false);
 
         return view;
     }

@@ -8,12 +8,9 @@ public class SchemesData {
     private String name;
     private int id;
 
-    public SchemesData(int id) {
-        this.id = id;
-    }
-
-    public SchemesData(String name) {
+    public SchemesData(String name, int id) {
         this.name = name;
+        this.id = id;
     }
 
     public String getTitle() {

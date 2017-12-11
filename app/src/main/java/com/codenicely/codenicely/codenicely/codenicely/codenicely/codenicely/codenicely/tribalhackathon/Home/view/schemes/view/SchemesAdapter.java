@@ -59,7 +59,7 @@ public class SchemesAdapter extends RecyclerView.Adapter<SchemesAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 sharedPreferences.setKeyId(data.getId());
-                ((Home)context).addFragment(new SubSchemesFragment(),data.getTitle());
+                ((Home)context).addFragment(new SubSchemesFragment());
             }
         });
     }

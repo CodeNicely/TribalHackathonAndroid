@@ -27,6 +27,6 @@ public class SchemesList {
 
         this.success = success;
         this.message = message;
-        this.scheme_list = scheme_list;
+        this.scheme_list = get_schemes;
     }
 }

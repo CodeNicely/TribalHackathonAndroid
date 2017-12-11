@@ -22,6 +22,7 @@ import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.cod
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,10 +45,10 @@ public class SubSchemesFragment extends Fragment implements SubSchemesView {
     private OnFragmentInteractionListener mListener;
 
     @BindView(R.id.recycler_sub_schemes)
-    RecyclerView schemes_recycler;
+    RecyclerView sub_schemes_recycler;
 
     @BindView(R.id.progressBar_sub_schemes)
-    ProgressBar schemes_progressBar;
+    ProgressBar sub_schemes_progressBar;
 
     WebView webView;
 
@@ -93,17 +94,17 @@ public class SubSchemesFragment extends Fragment implements SubSchemesView {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view  = inflater.inflate(R.layout.fragment_sub_scheme, container, false);
-
+        ButterKnife.bind(this,view);
         sharedPrefs = new SharedPrefs(getContext());
-        schemes_recycler.setHasFixedSize(true);
+        sub_schemes_recycler.setHasFixedSize(true);
         linearLayoutManager = new LinearLayoutManager(getContext());
-        schemes_recycler.setLayoutManager(linearLayoutManager);
+        sub_schemes_recycler.setLayoutManager(linearLayoutManager);
         adapter = new SubSchemesAdapter(getContext());
-        schemes_recycler.setAdapter(adapter);
-        schemes_recycler.setNestedScrollingEnabled(false);
+        sub_schemes_recycler.setAdapter(adapter);
+        sub_schemes_recycler.setNestedScrollingEnabled(false);
 
         subSchemesPresenter = new SubSchemesPresenterImpl(this,new RetrofitSubSchemesProvider());
-        subSchemesPresenter.requestSchemes("access_token",false,sharedPrefs.getId());
+        subSchemesPresenter.requestSchemes(sharedPrefs.getAccessToken(),false,sharedPrefs.getId());
 
 
         return view;
@@ -131,9 +132,9 @@ public class SubSchemesFragment extends Fragment implements SubSchemesView {
     @Override
     public void showProgressBar(boolean show) {
         if (show){
-            schemes_progressBar.setVisibility(View.VISIBLE);
+            sub_schemes_progressBar.setVisibility(View.VISIBLE);
         }else {
-            schemes_progressBar.setVisibility(View.INVISIBLE);
+            sub_schemes_progressBar.setVisibility(View.INVISIBLE);
         }
     }
 
