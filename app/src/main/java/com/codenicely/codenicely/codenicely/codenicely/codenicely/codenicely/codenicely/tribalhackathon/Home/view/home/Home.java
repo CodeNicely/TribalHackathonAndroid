@@ -39,7 +39,6 @@ public class Home extends AppCompatActivity {
 			public void onTabSelected(@IdRes int tabId) {
 				if (tabId == R.id.tab_profile) {
                     addFragment(new ProfileFragment());
-
 				}
 
 				else if (tabId == R.id.tab_events){
@@ -98,6 +97,7 @@ public class Home extends AppCompatActivity {
 			FragmentManager fragmentManager = getSupportFragmentManager();
 			FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 			fragmentTransaction.replace(R.id.contentContainer, fragment);
+			fragmentTransaction.addToBackStack(null);
 			fragmentTransaction.commit();
 		}
 	}

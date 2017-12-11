@@ -75,8 +75,6 @@ public class DocumentFragment extends DialogFragment implements DocumentView {
     @BindView(R.id.proceed)
     Button proceed;
 
-	@BindView(R.id.toolbar)
-	Toolbar toolbar;
 	private Bitmap bitmap;
 
 
@@ -138,7 +136,7 @@ public class DocumentFragment extends DialogFragment implements DocumentView {
 		document_recycler.setNestedScrollingEnabled(false);
 
 		documentPresenter = new DocumentPresenterImpl(this, new RetrofitDocumentProvider(getContext()));
-
+		context = getContext();
         sharedPrefs = new SharedPrefs(context);
 
 		documentPresenter.requestDocumentData(sharedPrefs.getAccessToken(),2);

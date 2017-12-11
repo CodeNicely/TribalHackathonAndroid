@@ -14,9 +14,15 @@
    <android.support.v7.widget.RecyclerView
        android:id="@+id/recycler_schemes"
        android:layout_width="match_parent"
+       android:layout_above="@id/proceed"
        android:layout_height="match_parent">
 
    </android.support.v7.widget.RecyclerView>
 
+    <Button
+        android:id="@+id/proceed"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
