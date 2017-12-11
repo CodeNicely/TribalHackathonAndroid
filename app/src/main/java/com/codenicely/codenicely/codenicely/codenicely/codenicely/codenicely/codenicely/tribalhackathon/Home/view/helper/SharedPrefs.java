@@ -12,7 +12,7 @@ public class SharedPrefs {
 
     private static final String PREF_NAME_LOGIN = "Login";
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
-
+    private static final String KEY_ID = "id";
     private static final String KEY_COMPANY_NAME = "company_name";
     private static final String KEY_FCM = "fcm";
     private static final String KEY_ACCESS_TOKEN = "access_token";
@@ -22,7 +22,7 @@ public class SharedPrefs {
     private static final String PROFILE_IMAGE = "profile_image";
     private static final String MOBILE= "mobile";
     private static final String EMAIL= "email";
-    private static final String GST_IN= "gst_in";
+    private static final String AADHAAR= "aadhaar";
     private static final String ADDRESS = "address";
     private static final String STATE = "state";
     private static final String IS_FIRST_TIME_LOGIN ="firstTimeLogin" ;
@@ -81,7 +81,13 @@ public class SharedPrefs {
         editor.putString(KEY_ACCESS_TOKEN, accessToken);
         editor.commit();
     }
-
+    public void setKeyId(int id){
+        editor.putInt(KEY_ID,id);
+        editor.commit();
+    }
+    public int getId(){
+        return pref.getInt(KEY_ID,0);
+    }
     public int getUserLanguage() {
         return pref.getInt(KEY_USER_LANGUAGE, 0);
     }
@@ -156,12 +162,12 @@ public class SharedPrefs {
         editor.putString(MOBILE, email);
         editor.commit();
     }
-    public String getGstIn() {
+    public String getAadhaar() {
 
-        return GST_IN;
+        return AADHAAR;
     }
-    public void setGstIn(String gst_in) {
-        editor.putString(GST_IN, gst_in);
+    public void setAadhaar(String aadhaar) {
+        editor.putString(AADHAAR, aadhaar);
         editor.commit();
     }
 

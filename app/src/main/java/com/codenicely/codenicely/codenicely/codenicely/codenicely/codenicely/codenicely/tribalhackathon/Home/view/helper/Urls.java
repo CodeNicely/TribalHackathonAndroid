@@ -19,4 +19,6 @@ public class Urls {
     public static final String REQUEST_SIGN_UP = "signup/";
     public static final String REQUEST_FORGOT = "forgot_password/";
     public static final String REQUEST_RESEND_OTP = "resend_otp/";
+    public static final String REQUEST_SCHEMES = "scheme_list/";
+    public static final String REQUEST_SUB_SCHEMES="subscheme_list/";
 }

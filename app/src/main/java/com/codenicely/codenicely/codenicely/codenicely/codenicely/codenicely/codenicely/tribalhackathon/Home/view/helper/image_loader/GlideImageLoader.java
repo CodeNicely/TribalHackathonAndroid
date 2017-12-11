@@ -63,7 +63,7 @@ public class GlideImageLoader implements ImageLoader {
                 .fitCenter().crossFade().into(imageView);
 
 
-        // This code is used for Round Image View using Glide :)
+        // This code is used for Round Image SplashView using Glide :)
         /*
         Glide.with(mContext).load(url).asBitmap().centerCrop().into(new BitmapImageViewTarget(imageView) {
             @Override

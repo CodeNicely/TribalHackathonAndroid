@@ -9,7 +9,7 @@ import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.cod
  * Created by aman on 26/6/17.
  */
 
-public interface View {
+public interface SplashView {
 
 
     void showMessage(String message);
