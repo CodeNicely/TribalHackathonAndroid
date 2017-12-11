@@ -1,7 +1,6 @@
 package com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.helper;
 
 
-import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.BuildConfig;
 
 /**
  * Created by ujjwal on 16/6/17.
@@ -21,4 +20,6 @@ public class Urls {
     public static final String REQUEST_RESEND_OTP = "resend_otp/";
     public static final String REQUEST_SCHEMES = "scheme_list/";
     public static final String REQUEST_SUB_SCHEMES="subscheme_list/";
+    public static final String REQUEST_UPLOAD_DOCUMENTS="upload_document/";
+
 }
