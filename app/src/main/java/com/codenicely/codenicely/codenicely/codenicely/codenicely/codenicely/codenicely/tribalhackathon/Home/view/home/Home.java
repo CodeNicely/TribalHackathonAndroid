@@ -93,6 +93,7 @@ public class Home extends AppCompatActivity {
 			fragmentTransaction.commit();
 		}
 	}
+
 //    public void addFragment(Fragment fragment, String title) {
 //        if (fragment != null) {
 //            FragmentManager fragmentManager = getSupportFragmentManager();
