@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF07C"
+    android:background="#FFFFFF"
     >
 
     <RelativeLayout
@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:adjustViewBounds="true"
-                android:src="@drawable/logooo" />
+                android:src="@drawable/ic_login" />
 
             <ProgressBar
                 android:id="@+id/imageProgressBar"
@@ -116,6 +116,45 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.7"
+                        android:contentDescription="icon_name"
+                        android:paddingTop="@dimen/padding_large"
+                        android:src="@drawable/ic_account_circle_accent_500_24dp" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:paddingBottom="@dimen/padding_large"
+                        android:textColorHint="@color/black"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/aadhaar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:hint="Aadhaar Number"
+                            android:inputType="number"
+                            android:textColor="@color/black"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -145,6 +184,45 @@
                             />
 
                     </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.7"
+                        android:contentDescription="icon_name"
+                        android:paddingTop="@dimen/padding_large"
+                        android:src="@drawable/ic_account_circle_accent_500_24dp" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:paddingBottom="@dimen/padding_large"
+                        android:textColorHint="@color/black"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:hint="Address"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
                 </LinearLayout>
 
                 <LinearLayout

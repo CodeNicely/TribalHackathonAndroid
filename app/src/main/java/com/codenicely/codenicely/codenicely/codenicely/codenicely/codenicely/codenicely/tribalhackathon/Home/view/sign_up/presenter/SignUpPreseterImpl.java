@@ -26,18 +26,15 @@ public class SignUpPreseterImpl implements SignUpPresenter {
     }
 
     @Override
-    public void requestOtp(String mobile, String company_name, String password, String refer_code, final boolean isChecked) {
+    public void requestOtp(String mobile, String company_name, String password, String otp1, String address, String aadhaar, final boolean isChecked) {
         signUpView.enable_signUp(false);
         signUpView.showProgressBar(true);
-        signUpProvider.requestOtp(mobile, company_name, password, refer_code,new OtpCallBack() {
+        signUpProvider.requestOtp(mobile, company_name, password,otp1,address,aadhaar,new OtpCallBack() {
             @Override
             public void onSuccess(OtpData otpData) {
                 if(otpData.isSuccess()){
-					if ((otpData.isRcCorrect()) && isChecked){
-						signUpView.showMessage("Incorrect Referral Code");
-					}else {
+
 						signUpView.onOtpSend(otpData);
-					}
                     signUpView.enable_signUp(true);
                     signUpView.showProgressBar(false);
                 }else{
@@ -56,11 +53,11 @@ public class SignUpPreseterImpl implements SignUpPresenter {
     }
 
     @Override
-    public void requestSignUp(String mobile, final String gst_in, String company_name, String email,
-                              String password, String otp) {
+    public void requestSignUp(String mobile, String company_name,
+                              String password, String otp,String address,String aadhaar) {
         signUpView.enable_otp(false);
         signUpView.showProgressBar(true);
-        signUpProvider.requestSignUp(mobile, gst_in, company_name, email, password, otp,
+        signUpProvider.requestSignUp(mobile, company_name,password, otp,address,aadhaar,
                 new SignUpCallBack() {
             @Override
             public void onSuccess(SignUpData signUpData) {

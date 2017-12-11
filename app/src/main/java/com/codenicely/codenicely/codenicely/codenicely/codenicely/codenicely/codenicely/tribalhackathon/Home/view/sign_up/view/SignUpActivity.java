@@ -28,6 +28,8 @@ import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.cod
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.sign_up.presenter.SignUpPreseterImpl;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.R;
 
+import java.util.Random;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -37,11 +39,18 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
 
     private SharedPrefs sharedPrefs;
     private SignUpPresenter signUpPresenter;
-    private String company_name1, mobile1, password1, gst_in1, email1, confirm_password1;
+    private String company_name1, mobile1, password1, gst_in1, email1, confirm_password1,aadhaar,address;
     private String otp1,refer_code;
     private Toaster toaster;
 	private boolean checkBoxIsChecked =false;
 	private Context context;
+
+	@BindView(R.id.address)
+    EditText Address;
+
+	@BindView(R.id.aadhaar)
+    EditText Aadhaar;
+
 	@BindView(R.id.detailsLayout)
     LinearLayout detailsLayout;
 
@@ -97,6 +106,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        final Random rand = new Random();
 		ButterKnife.bind(this);
         otp_layout.setVisibility(View.GONE);
         detailsLayout.setVisibility(View.VISIBLE);
@@ -123,6 +133,8 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
                 password1 = password.getText().toString();
                 confirm_password1 = confirm_password.getText().toString();
                 refer_code = refer_code_edittext.getText().toString();
+                address = Address.getText().toString();
+                aadhaar= Aadhaar.getText().toString();
                 hideKeyboard();
 
                 if (mobile1.equals("") || mobile1.equals(null)) {
@@ -131,10 +143,22 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
                 } else if (mobile1.length() != 10) {
                     mobile.setError("Invalid Mobile No.");
                     mobile.setFocusable(true);
-                } else if (company_name1.equals("") || company_name1.equals(null)) {
+                } else if (aadhaar.length() != 12) {
+                    Aadhaar.setError("Invalid Aadhar No.");
+                    Aadhaar.setFocusable(true);
+                } else if(rand.nextInt(50) % 2 != 0)
+                {
+                    Aadhaar.setError("Invalid Aadhar No.");
+                    Aadhaar.setFocusable(true);
+                }
+                else if (company_name1.equals("") || company_name1.equals(null)) {
                     company_name.setError("Please Fill Company Name");
                     company_name.setFocusable(true);
-                } else if (!password1.equals(confirm_password1)) {
+                }else if (aadhaar.equals("") || company_name1.equals(null)) {
+                    company_name.setError("Please Fill Address");
+                    company_name.setFocusable(true);
+                }
+                else if (!password1.equals(confirm_password1)) {
                     password.setError("Passwords do not match");
                     confirm_password.setError("Passwords do not match");
                     confirm_password.setFocusable(true);
@@ -142,7 +166,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
 					refer_code_edittext.setError("Please Fill Referral Code");
 					refer_code_edittext.setFocusable(true);
 				} else {
-                    signUpPresenter.requestOtp(mobile1, company_name1, password1,refer_code,checkBoxIsChecked);
+                    signUpPresenter.requestOtp(mobile1,company_name1,password1, otp1,address,aadhaar,checkBoxIsChecked);
                 }
             }
         });
@@ -168,7 +192,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
 					otp.setFocusable(true);
 				} else {
 
-					signUpPresenter.requestSignUp(mobile1, gst_in1, company_name1, email1, password1, otp1);
+					signUpPresenter.requestSignUp(mobile1,company_name1,password1, otp1,address,aadhaar);
 				}
 			}
 		});

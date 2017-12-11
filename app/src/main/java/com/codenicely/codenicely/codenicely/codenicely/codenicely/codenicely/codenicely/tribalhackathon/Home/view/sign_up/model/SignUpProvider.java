@@ -11,7 +11,7 @@ import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.cod
 
 public interface SignUpProvider {
 
-    void requestOtp(String mobile, String company_name, String password, String refer_code, OtpCallBack otpCallBack);
+    void requestOtp(String mobile, String company_name, String password, String otp1, String address, String aadhaar, OtpCallBack otpCallBack);
 
     void requestSignUp(String mobile, String gst_in, String company_name, String email,
 					   String password, String otp, SignUpCallBack signUpCallBack);
