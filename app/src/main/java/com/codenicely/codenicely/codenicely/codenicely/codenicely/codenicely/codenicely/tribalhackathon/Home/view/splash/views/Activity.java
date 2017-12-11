@@ -52,7 +52,7 @@ public class Activity extends AppCompatActivity implements SplashView {
         toaster = new Toaster(this);
         imageLoader = new GlideImageLoader(this);
 //        Glide.with(this).load(R.drawable.codenicely_logo).into(codenicely_logo);
-        Glide.with(this).load(R.drawable.logooo).into(logo);
+        Glide.with(this).load(R.drawable.ic_login).into(logo);
 //        Glide.with(this).load(R.drawable.gst_invoice_maker).into(logo1);
 
         sharedPrefs = new SharedPrefs(this);

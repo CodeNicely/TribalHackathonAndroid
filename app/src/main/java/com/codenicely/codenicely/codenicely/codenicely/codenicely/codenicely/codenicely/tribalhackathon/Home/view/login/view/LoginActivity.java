@@ -142,10 +142,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     @Override
     public void onVerified(LoginData loginData) {
         sharedPreferences.setLoggedIn(true);
+        sharedPreferences.setFirstTimeLaunch(true);
+        sharedPreferences.setFirstTimeLogin(true);
+        
         sharedPreferences.setAccessToken(loginData.getAccess_token());
         sharedPreferences.setCompanyName(loginData.getCompany_name());
         sharedPreferences.setMobile(loginData.getMobile());
-        sharedPreferences.setLoggedIn(true);
 
         FcmUtils fcmUtils=new FcmUtils(this);
 
