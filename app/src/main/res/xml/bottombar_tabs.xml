@@ -13,11 +13,11 @@
         icon="@drawable/ic_person_black_24dp"
         title="Home" />
     <tab
-        id="@+id/tab_aboutus"
+        id="@+id/tab_track"
         icon="@drawable/ic_person_black_24dp"
         title="Track Status" />
     <tab
-        id="@+id/tab_sponsors"
+        id="@+id/tab_apply"
         icon="@drawable/ic_person_black_24dp"
         title="Apply" />
 

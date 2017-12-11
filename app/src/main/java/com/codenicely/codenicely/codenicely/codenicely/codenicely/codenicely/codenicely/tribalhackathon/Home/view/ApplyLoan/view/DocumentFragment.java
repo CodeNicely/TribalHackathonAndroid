@@ -69,15 +69,6 @@ public class DocumentFragment extends DialogFragment implements DocumentView {
 	private final int GALLERY_REQUEST_ID = 1;
 	private Uri imageUri = null;
 
-	@BindView(R.id.logo)
-	ImageView logo;
-
-	@BindView(R.id.mobile)
-    TextView mobileTextView;
-
-    @BindView(R.id.company_name)
-    EditText nameEditText;
-
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
 
@@ -96,8 +87,6 @@ public class DocumentFragment extends DialogFragment implements DocumentView {
 
 	@BindView(R.id.recycler_schemes)
 	RecyclerView document_recycler;
-
-	@BindView(R.id.progressBar_schemes)
 
 	ProgressBar document_progressBar;
 	LinearLayoutManager linearLayoutManager;
@@ -176,7 +165,6 @@ public class DocumentFragment extends DialogFragment implements DocumentView {
 				//bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
 				if (imageUri != null) {
 					bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imageUri);
-					logo.setImageBitmap(bitmap);
 
 				}
 			} catch (IOException e) {

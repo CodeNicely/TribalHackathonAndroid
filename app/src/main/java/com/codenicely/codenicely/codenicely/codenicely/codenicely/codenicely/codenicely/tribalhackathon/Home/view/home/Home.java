@@ -10,7 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.webkit.WebView;
 
+import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.ApplyLoan.view.DocumentFragment;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.helper.SharedPrefs;
+import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.profile.ProfileFragment;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.view.SchemesFragment;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.R;
 import com.roughike.bottombar.BottomBar;
@@ -36,6 +38,7 @@ public class Home extends AppCompatActivity {
 			@Override
 			public void onTabSelected(@IdRes int tabId) {
 				if (tabId == R.id.tab_profile) {
+                    addFragment(new ProfileFragment());
 
 				}
 
@@ -45,14 +48,15 @@ public class Home extends AppCompatActivity {
 				else if (tabId == R.id.tab_home){
 
 				}
-				else if (tabId == R.id.tab_sponsors){
+				else if (tabId == R.id.tab_track){
 
 
 				}
-				else if (tabId == R.id.tab_aboutus){
+				else if (tabId == R.id.tab_apply){
+                    addFragment(new DocumentFragment());
 
 
-				}
+                }
 
 			}
 		});

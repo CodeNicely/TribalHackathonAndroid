@@ -142,9 +142,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     @Override
     public void onVerified(LoginData loginData) {
         sharedPreferences.setLoggedIn(true);
-        sharedPreferences.setFirstTimeLaunch(true);
-        sharedPreferences.setFirstTimeLogin(true);
-        
+        sharedPreferences.setFirstTimeLaunch(false);
+//        sharedPreferences.setFirstTimeLogin(true);
+
         sharedPreferences.setAccessToken(loginData.getAccess_token());
         sharedPreferences.setCompanyName(loginData.getCompany_name());
         sharedPreferences.setMobile(loginData.getMobile());

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <ImageView
+            android:id="@+id/modi"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/narendra_modi"/>
+        <TextView
+            android:id="@+id/modi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modi"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:text="Narendra Modi
+Prime Minister,India"/>
+        <ImageView
+            android:id="@+id/raman"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/modi_text"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/raman_singh"/>
+        <TextView
+            android:id="@+id/raman_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/raman"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:text="Dr. Raman Singh
+Chief Minister,Chhattisgarh,India"/>
+        <TextView
+            android:id="@+id/introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_margin="20dp"
+            android:text="Chhattisgarh State Intermediary Cooperative Finance and Development Corporation Limited Raipur was formed on 30.10.2000 under the Madhya Pradesh Co-operative Society (Reorganization and Construction) Ordinance No.- 04, 2000. Conducting individual schemes of economic development of Scheduled Castes, Safai Kamgar, Scheduled Tribes, Backward Classes and Minority Sections by the Corporation, working as the Chawlising Agency of the National Corporations of the said sections, making self-reliant by providing financial loan assistance and vocational training for self-employment. Work is being done according to the purpose of the regime. This work is implemented by the District Intermediary Co-operative Development Committee and arrangements are made to train skill development before the establishment of business for the purpose of developing business mindset in the unemployed youth of these sections"
+            android:layout_below="@+id/raman_text"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/drawer_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--tools:openDrawer="start"-->
+
+    <!--&gt;-->
+
+    <!--<include-->
+    <!--layout="@layout/app_bar_home"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+
+    <!--</android.support.v4.widget.DrawerLayout>-->
+</ScrollView>
