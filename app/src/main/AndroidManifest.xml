@@ -34,10 +34,6 @@
         <activity
             android:name=".Home.view.forgot_password.view.ForgotActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Home.view.sub_schemes.WebViewActivity"
-            android:label="@string/title_activity_web_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -22,7 +22,6 @@ public class Home extends AppCompatActivity {
     private Toolbar toolbar;
     private String access_token;
     private static final String TAG = Home.class.getSimpleName();
-	private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,12 +95,6 @@ public class Home extends AppCompatActivity {
 			fragmentTransaction.replace(R.id.contentContainer, fragment);
 			fragmentTransaction.commit();
 		}
-	}
-
-	public void openWebview(String url){
-		webView = (WebView) findViewById(R.id.webView1);
-		webView.getSettings().setJavaScriptEnabled(true);
-		webView.loadUrl("http://www.google.com");
 	}
 
     public void setToolbar() {
