@@ -5,5 +5,4 @@ package com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.co
  */
 
 public class ApplyLoanData {
-private
 }

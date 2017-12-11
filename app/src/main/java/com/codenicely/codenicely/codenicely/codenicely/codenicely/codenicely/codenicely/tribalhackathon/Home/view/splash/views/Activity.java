@@ -28,7 +28,7 @@ import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.cod
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Activity extends AppCompatActivity implements View {
+public class Activity extends AppCompatActivity implements SplashView {
 
     @BindView(R.id.progressBar)
     ProgressBar progressBar;

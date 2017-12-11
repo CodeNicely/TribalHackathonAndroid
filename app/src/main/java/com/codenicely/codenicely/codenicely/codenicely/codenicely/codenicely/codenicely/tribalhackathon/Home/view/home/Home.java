@@ -8,8 +8,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.webkit.WebView;
 
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.helper.SharedPrefs;
+import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.schemes.view.SchemesFragment;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.R;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
@@ -20,6 +22,7 @@ public class Home extends AppCompatActivity {
     private Toolbar toolbar;
     private String access_token;
     private static final String TAG = Home.class.getSimpleName();
+	private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class Home extends AppCompatActivity {
 				}
 
 				else if (tabId == R.id.tab_events){
+				    addFragment(new SchemesFragment());
 				}
 				else if (tabId == R.id.tab_home){
 
@@ -94,17 +98,11 @@ public class Home extends AppCompatActivity {
 		}
 	}
 
-//    public void addFragment(Fragment fragment, String title) {
-//        if (fragment != null) {
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-////            fragmentTransaction.setCustomAnimations(R.anim.slide_up, R.anim.slide_down);
-//            fragmentTransaction.replace(R.id.home_layout, fragment);
-//            fragmentTransaction.addToBackStack(null);
-//            fragmentTransaction.commit();
-//            //     getSupportActionBar().setTitle(title);
-//        }
-//    }
+	public void openWebview(String url){
+		webView = (WebView) findViewById(R.id.webView1);
+		webView.getSettings().setJavaScriptEnabled(true);
+		webView.loadUrl("http://www.google.com");
+	}
 
     public void setToolbar() {
         setSupportActionBar(toolbar);

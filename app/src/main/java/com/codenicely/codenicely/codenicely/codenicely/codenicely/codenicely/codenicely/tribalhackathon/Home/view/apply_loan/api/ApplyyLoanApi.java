@@ -16,7 +16,7 @@ import rx.Observable;
 
 public interface ApplyyLoanApi {
 	@Multipart
-	@POST(Urls.REQUEST_EDIT_COMPANY_PROFILE)
+	@POST(Urls.REQUEST_RESEND_OTP)
 	Observable<ApplyLoanData> requestEditProfile(
 	  @Part("access_token") RequestBody access_token,
 	  @Part("name") RequestBody company_name,

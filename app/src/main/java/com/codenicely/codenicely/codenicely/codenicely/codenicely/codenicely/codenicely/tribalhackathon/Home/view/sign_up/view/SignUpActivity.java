@@ -196,9 +196,9 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
 				}
 			}
 		});
-//        referralInfo.setOnClickListener(new View.OnClickListener() {
+//        referralInfo.setOnClickListener(new SplashView.OnClickListener() {
 //            @Override
-//            public void onClick(View v) {
+//            public void onClick(SplashView v) {
 ////                referralInfo.show
 //				new SimpleTooltip.Builder(context)
 //						.anchorView(referralInfo)

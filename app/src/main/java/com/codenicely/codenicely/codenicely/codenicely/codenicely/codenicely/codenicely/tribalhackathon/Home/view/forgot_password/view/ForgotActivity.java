@@ -153,13 +153,13 @@ public class ForgotActivity extends AppCompatActivity implements ForgotView {
 
     @Override
     public void onOtpVerified() {
-//		changePasswordLayout.setVisibility(View.VISIBLE);
-//		otp_layout.setVisibility(View.GONE);
-//		otp_layout.setVisibility(View.GONE);
+//		changePasswordLayout.setVisibility(SplashView.VISIBLE);
+//		otp_layout.setVisibility(SplashView.GONE);
+//		otp_layout.setVisibility(SplashView.GONE);
 //		initialise();
-//		proceed_change_password.setOnClickListener(new View.OnClickListener() {
+//		proceed_change_password.setOnClickListener(new SplashView.OnClickListener() {
 //			@Override
-//			public void onClick(View view) {
+//			public void onClick(SplashView view) {
 //                password1=password.getText().toString();
 //                confirm_password1=confirm_password.getText().toString();
 //				hideKeyboard();

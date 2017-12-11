@@ -12,7 +12,7 @@ public class SharedPrefs {
 
     private static final String PREF_NAME_LOGIN = "Login";
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
-
+    private static final String KEY_ID = "id";
     private static final String KEY_COMPANY_NAME = "company_name";
     private static final String KEY_FCM = "fcm";
     private static final String KEY_ACCESS_TOKEN = "access_token";
@@ -81,7 +81,13 @@ public class SharedPrefs {
         editor.putString(KEY_ACCESS_TOKEN, accessToken);
         editor.commit();
     }
-
+    public void setKeyId(int id){
+        editor.putInt(KEY_ID,id);
+        editor.commit();
+    }
+    public int getId(){
+        return pref.getInt(KEY_ID,0);
+    }
     public int getUserLanguage() {
         return pref.getInt(KEY_USER_LANGUAGE, 0);
     }
