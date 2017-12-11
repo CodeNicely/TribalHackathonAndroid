@@ -263,9 +263,9 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView {
 
         sharedPrefs.setAccessToken(access_token);
         sharedPrefs.setCompanyName(company_name1);
-        sharedPrefs.setEmail(email1);
+        sharedPrefs.setEmail(address);
         sharedPrefs.setMobile(mobile1);
-        sharedPrefs.setGstIn(gst_in1);
+        sharedPrefs.setAadhaar(aadhaar);
         sharedPrefs.setLoggedIn(true);
 
         FcmUtils fcmUtils=new FcmUtils(this);

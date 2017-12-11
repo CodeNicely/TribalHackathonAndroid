@@ -22,7 +22,7 @@ public class SharedPrefs {
     private static final String PROFILE_IMAGE = "profile_image";
     private static final String MOBILE= "mobile";
     private static final String EMAIL= "email";
-    private static final String GST_IN= "gst_in";
+    private static final String AADHAAR= "aadhaar";
     private static final String ADDRESS = "address";
     private static final String STATE = "state";
     private static final String IS_FIRST_TIME_LOGIN ="firstTimeLogin" ;
@@ -162,12 +162,12 @@ public class SharedPrefs {
         editor.putString(MOBILE, email);
         editor.commit();
     }
-    public String getGstIn() {
+    public String getAadhaar() {
 
-        return GST_IN;
+        return AADHAAR;
     }
-    public void setGstIn(String gst_in) {
-        editor.putString(GST_IN, gst_in);
+    public void setAadhaar(String aadhaar) {
+        editor.putString(AADHAAR, aadhaar);
         editor.commit();
     }
 

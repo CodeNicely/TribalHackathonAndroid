@@ -30,6 +30,7 @@ public class Home extends AppCompatActivity {
 
         sharedPrefs = new SharedPrefs(this);
         access_token = sharedPrefs.getAccessToken();
+
 		BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar1);
 		bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
 			@Override

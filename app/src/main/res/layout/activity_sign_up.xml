@@ -507,13 +507,13 @@
                     android:id="@+id/otp_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="#FFF07C"
+                    app:cardBackgroundColor="#FFFFFF"
                     app:contentPadding="@dimen/padding_large">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#FFF07C"
+                        android:background="#FFFFFF"
                         android:orientation="vertical">
 
                         <TextView
@@ -522,7 +522,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginLeft="@dimen/margin_extra_small"
                             android:layout_marginRight="@dimen/margin_extra_small"
-                            android:background="#FFF07C"
+                            android:background="#FFFFFF"
                             android:fontFamily="sans-serif"
 
                             android:gravity="center"
