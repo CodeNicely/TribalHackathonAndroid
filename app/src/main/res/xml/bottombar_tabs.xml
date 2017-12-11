@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/ic_person_black_24dp"
+        title="Profile" />
+    <tab
+        id="@+id/tab_events"
+        icon="@drawable/ic_person_black_24dp"
+        title="Schemes" />
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_person_black_24dp"
+        title="Home" />
+    <tab
+        id="@+id/tab_aboutus"
+        icon="@drawable/ic_person_black_24dp"
+        title="Track Status" />
+    <tab
+        id="@+id/tab_sponsors"
+        icon="@drawable/ic_person_black_24dp"
+        title="Apply" />
+
+</tabs>

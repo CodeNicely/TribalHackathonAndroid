@@ -2,6 +2,7 @@ package com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.co
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,13 +11,14 @@ import android.support.v7.widget.Toolbar;
 
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.helper.SharedPrefs;
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.R;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 
 public class Home extends AppCompatActivity {
     private SharedPrefs sharedPrefs;
     private Toolbar toolbar;
-    private String transaction_id,access_token;
-    private int subscription_period;
+    private String access_token;
     private static final String TAG = Home.class.getSimpleName();
 
     @Override
@@ -26,9 +28,30 @@ public class Home extends AppCompatActivity {
 
         sharedPrefs = new SharedPrefs(this);
         access_token = sharedPrefs.getAccessToken();
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+		BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar1);
+		bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+			@Override
+			public void onTabSelected(@IdRes int tabId) {
+				if (tabId == R.id.tab_profile) {
 
+				}
+
+				else if (tabId == R.id.tab_events){
+				}
+				else if (tabId == R.id.tab_home){
+
+				}
+				else if (tabId == R.id.tab_sponsors){
+
+
+				}
+				else if (tabId == R.id.tab_aboutus){
+
+
+				}
+
+			}
+		});
     }
 
     @Override
@@ -62,17 +85,25 @@ public class Home extends AppCompatActivity {
         }
     }
 
-    public void addFragment(Fragment fragment, String title) {
-        if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//            fragmentTransaction.setCustomAnimations(R.anim.slide_up, R.anim.slide_down);
-            fragmentTransaction.replace(R.id.home_layout, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-            //     getSupportActionBar().setTitle(title);
-        }
-    }
+	public void addFragment(Fragment fragment) {
+		if (fragment != null) {
+			FragmentManager fragmentManager = getSupportFragmentManager();
+			FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+			fragmentTransaction.replace(R.id.contentContainer, fragment);
+			fragmentTransaction.commit();
+		}
+	}
+//    public void addFragment(Fragment fragment, String title) {
+//        if (fragment != null) {
+//            FragmentManager fragmentManager = getSupportFragmentManager();
+//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+////            fragmentTransaction.setCustomAnimations(R.anim.slide_up, R.anim.slide_down);
+//            fragmentTransaction.replace(R.id.home_layout, fragment);
+//            fragmentTransaction.addToBackStack(null);
+//            fragmentTransaction.commit();
+//            //     getSupportActionBar().setTitle(title);
+//        }
+//    }
 
     public void setToolbar() {
         setSupportActionBar(toolbar);
