@@ -139,9 +139,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif"
-                            android:hint="Aadhaar Number"
-                            android:inputType="number"
+                            android:hint="@string/aadhaar_number"
                             android:textColor="@color/black"
+                            android:maxLength="12"
                             />
 
                     </android.support.design.widget.TextInputLayout>
