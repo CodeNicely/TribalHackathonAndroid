@@ -3,6 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+    <WebView
+        android:id="@+id/webview_sub_scheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </WebView>
 
     <ProgressBar
         android:id="@+id/progressBar_schemes"

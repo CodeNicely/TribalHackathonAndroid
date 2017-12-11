@@ -12,6 +12,6 @@ import retrofit2.http.Query;
  */
 
 public interface RequestSubSchemesApi {
-    @GET(Urls.REQUEST_SCHEMES)
+    @GET(Urls.REQUEST_SUB_SCHEMES)
     Call<SubSchemesList> getSchemesData(@Query("access_token") String access_token, @Query("flag_lang") boolean language, @Query("scheme_id") int scheme_id);
 }

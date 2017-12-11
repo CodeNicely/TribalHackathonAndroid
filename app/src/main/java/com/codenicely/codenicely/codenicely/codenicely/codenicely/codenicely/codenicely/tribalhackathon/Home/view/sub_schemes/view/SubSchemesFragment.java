@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ProgressBar;
 
 import com.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.codenicely.tribalhackathon.Home.view.helper.SharedPrefs;
@@ -47,6 +48,8 @@ public class SubSchemesFragment extends Fragment implements SubSchemesView {
 
     @BindView(R.id.progressBar_sub_schemes)
     ProgressBar schemes_progressBar;
+
+    WebView webView;
 
     LinearLayoutManager linearLayoutManager;
     SubSchemesAdapter adapter;
@@ -90,6 +93,7 @@ public class SubSchemesFragment extends Fragment implements SubSchemesView {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view  = inflater.inflate(R.layout.fragment_sub_scheme, container, false);
+
         sharedPrefs = new SharedPrefs(getContext());
         schemes_recycler.setHasFixedSize(true);
         linearLayoutManager = new LinearLayoutManager(getContext());
